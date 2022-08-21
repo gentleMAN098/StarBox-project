@@ -1,1 +1,6 @@
-body {background-color:#006341;}
+body,
+html {
+  margin: 0;
+  /* background-color:#006341; */
+  padding: 0;
+}

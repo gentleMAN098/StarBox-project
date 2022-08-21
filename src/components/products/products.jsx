@@ -31,7 +31,7 @@ function Products() {
           marginTop: '-40px',
           left: 25,
         }}
-        alt='The house from the offer.'
+        alt='product image'
         src='https://globalassets.starbucks.com/assets/17f8efcbdbc8476e9992503d4ee19f95.jpg?impolicy=1by1_tight_288'
         loading='lazy'
       />
