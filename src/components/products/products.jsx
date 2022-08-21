@@ -1,0 +1,90 @@
+import * as React from 'react';
+// import { Paper } from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import { Button, Typography } from '@mui/material';
+
+function Products() {
+  const data = fetch('http://localhost:3001/products')
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+  console.log(data);
+  return (
+    <Box
+      sx={{
+        backgroundColor: '#FFFFFF',
+        height: '327px',
+        textAlign: 'center',
+        width: '218px',
+        borderRadius: '23px',
+        marginTop: '50px',
+        boxShadow:
+          '1px 2px 2px rgba(143, 158, 163, 0.2), 2px 4px 4px rgba(143, 158, 163, 0.2), 4px 8px 8px rgba(143, 158, 163, 0.2), 8px 16px 16px rgba(143, 158, 163, 0.2), 16px 32px 32px rgba(143, 158, 163, 0.2)',
+      }}
+    >
+      <Box
+        component='img'
+        sx={{
+          height: 168,
+          width: 168,
+          borderRadius: '50%',
+          marginTop: '-40px',
+          left: 25,
+        }}
+        alt='The house from the offer.'
+        src='https://globalassets.starbucks.com/assets/17f8efcbdbc8476e9992503d4ee19f95.jpg?impolicy=1by1_tight_288'
+      />
+      <Typography
+        sx={{
+          width: '172px',
+          height: '76px',
+          fontSize: '18px',
+          fontWeight: '400',
+          color: '#404040',
+          fontFamily: 'vazir',
+          margin: '1rem auto 0 auto',
+        }}
+      >
+        نوشیدنی فراپوچینو با کوکی خرد شده
+      </Typography>
+      <Typography
+        sx={{
+          width: '137px',
+          height: '22px',
+          color: '#006341',
+          direction: 'rtl',
+          fontFamily: 'vazir',
+          margin: '1rem auto 0 auto',
+        }}
+      >
+        55000 تومان
+      </Typography>
+      <Button
+        variant='contained'
+        onClick={() => {
+          alert('clicked');
+        }}
+        sx={{
+          ':hover': {
+            backgroundColor: '#00A76A',
+          },
+          backgroundColor: '#006341',
+          borderRadius: '23px',
+          width: 189,
+          height: 38.37,
+          marginTop: '1rem',
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: 14,
+            fontWeight: '400',
+          }}
+        >
+          افزودن به سبد
+        </Typography>
+      </Button>
+    </Box>
+  );
+}
+
+export default Products;
