@@ -4,10 +4,11 @@ import Box from '@mui/material/Box';
 import { Button, Typography } from '@mui/material';
 
 function Products() {
-  const data = fetch('http://localhost:3001/products')
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-  console.log(data);
+  // let products;
+  // fetch('http://localhost:3001/products')
+  //   .then((response) => response.json())
+  //   .then((data) => (products = data))
+  //   .then(() => console.log(products));
   return (
     <Box
       sx={{
@@ -32,6 +33,7 @@ function Products() {
         }}
         alt='The house from the offer.'
         src='https://globalassets.starbucks.com/assets/17f8efcbdbc8476e9992503d4ee19f95.jpg?impolicy=1by1_tight_288'
+        loading='lazy'
       />
       <Typography
         sx={{
