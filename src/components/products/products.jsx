@@ -1,7 +1,7 @@
 import * as React from 'react';
 // import { Paper } from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { Button, Card, Typography } from '@mui/material';
 
 function Products() {
   // let products;
@@ -9,9 +9,22 @@ function Products() {
   //   .then((response) => response.json())
   //   .then((data) => (products = data))
   //   .then(() => console.log(products));
+
+  // const axios = require('axios');
+
+  // axios.get('http://localhost:3001/products').then((resp) => {
+  //   console.log(resp.data);
+  // });
+  //////////1
+  // getRequest();
+  // async function data await aiox imported function await cont products
+  //use top function useffect data
+  // MAP RUU STATE
+  //redux
   return (
-    <Box
+    <Card
       sx={{
+        overflow: 'unset',
         backgroundColor: '#FFFFFF',
         height: '327px',
         textAlign: 'center',
@@ -85,7 +98,7 @@ function Products() {
           افزودن به سبد
         </Typography>
       </Button>
-    </Box>
+    </Card>
   );
 }
 

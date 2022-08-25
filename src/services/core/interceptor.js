@@ -45,3 +45,11 @@
 // };
 
 // export default Http;
+
+export async function getRequest() {
+  let res = await axios.get('http://localhost:3001/products');
+
+  let data = res.data;
+  console.log(data);
+}
+getRequest();
